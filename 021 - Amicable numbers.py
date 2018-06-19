@@ -21,12 +21,9 @@ def d(n):
 
 
 s = 0
-num = {n: d(n) for n in range(1, 10000)}
-print(num)
 
-for p in num.keys():
-    if p == num.get(p, 0):
+for p in range(1, 10000):
+    if p != d(p) and p == d(d(p)):
         s += p
-        print(p)
 
-print(s)  # 8659
+print(s)  # 31626
